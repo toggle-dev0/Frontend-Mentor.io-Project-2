@@ -1,0 +1,142 @@
+$cyan-light: hsl(193, 38%, 86%);
+$neonGreen: hsl(150, 100%, 66%);
+$grayBlue: hsl(217, 19%, 38%);
+$grayBlue-dark: hsl(217, 19%, 24%);
+$blue-dark: hsl(218, 23%, 16%);
+$quoteSize: 1.75rem;
+$font-weight: 800;
+$font: "Manrope", Verdena, sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    background-color: $blue-dark;
+}
+
+main {
+    padding: 0 2rem;
+    margin: 0 auto;
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    width: clamp(23.4rem, 50%, 90rem);
+    max-width: 100%;
+}
+
+.container {
+    background-color: $grayBlue-dark;
+    // border: .125rem solid hsl(0, 0%, 0%);
+    padding: 2rem;
+    border-radius: .75rem;
+    position: relative;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.advice-id {
+    &::before {
+        content: "#";
+    }
+}
+
+.advice-heading {
+    display: block;
+    text-align: center;
+    padding: 0 0 1rem;
+    color: $neonGreen;
+    text-transform: uppercase;
+    font-family: $font;
+    letter-spacing: .4rem;
+    font-size: .8rem;
+    font-weight: $font-weight;
+}
+
+.advice {
+
+    &::before, &::after {
+        content: '"';
+    }
+
+    font-family: $font;
+    font-weight: $font-weight;
+    text-align: center;
+    font-size: $quoteSize;
+    color: $cyan-light;
+
+}
+
+.divider {
+    margin: 2rem 0;
+}
+
+.dice-sphere {
+    margin: 0 auto;
+    width: 3rem;
+    height: 3rem;
+    // padding: 2rem;
+    background-color: $neonGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(1rem);
+    cursor: pointer;
+    transition: all .2s ease;
+
+    &:hover {
+        box-shadow: 0 0 1rem 0 $neonGreen;
+    }
+
+    &:active .dice {
+        transform: rotate(360deg);
+    }
+}
+
+.dice {
+    width: 40%;
+    transition: all .3s;
+
+}
+
+.attribution {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $grayBlue;
+    padding: 1.5rem;
+    color: $blue-dark;
+    font-size: 1rem;
+
+    a:link, a:visited {
+        color: $neonGreen;
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 23rem) {
+    .attribution {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

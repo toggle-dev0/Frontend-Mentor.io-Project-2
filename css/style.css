@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  background-color: hsl(218, 23%, 16%);
+}
+
+main {
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  width: clamp(23.4rem, 50%, 90rem);
+  max-width: 100%;
+}
+
+.container {
+  background-color: hsl(217, 19%, 24%);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.advice-id::before {
+  content: "#";
+}
+
+.advice-heading {
+  display: block;
+  text-align: center;
+  padding: 0 0 1rem;
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  font-family: "Manrope", Verdena, sans-serif;
+  letter-spacing: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.advice {
+  font-family: "Manrope", Verdena, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.75rem;
+  color: hsl(193, 38%, 86%);
+}
+.advice::before, .advice::after {
+  content: '"';
+}
+
+.divider {
+  margin: 2rem 0;
+}
+
+.dice-sphere {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(150, 100%, 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(1rem);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dice-sphere:hover {
+  box-shadow: 0 0 1rem 0 hsl(150, 100%, 66%);
+}
+.dice-sphere:active .dice {
+  transform: rotate(360deg);
+}
+
+.dice {
+  width: 40%;
+  transition: all 0.3s;
+}
+
+.attribution {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 19%, 38%);
+  padding: 1.5rem;
+  color: hsl(218, 23%, 16%);
+  font-size: 1rem;
+}
+.attribution a:link, .attribution a:visited {
+  color: hsl(150, 100%, 66%);
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 23rem) {
+  .attribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */

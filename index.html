@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <span class="advice-heading"
+          >Advice
+          <span class="advice-id"><!-- Advice ID goes here --></span>
+        </span>
+        <p class="advice"><!-- Advice text goes here --> ... </p> 
+        <picture>
+          <source media="(max-width: 23.4rem)" srcset="/images/pattern-divider-mobile.svg">
+          <source media="(max-width: 90rem)" srcset="/images/pattern-divider-desktop.svg">
+          <img class="divider" src="/images/pattern-divider-desktop.svg"/>
+        </picture>
+        <button class="dice-sphere">
+          <img class="dice" src="/images/icon-dice.svg" />
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a>.
+        </p>
+        <p>
+          Coded by <a href="https://github.com/toggle-dev0" target="_blank">toggle-dev0</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
